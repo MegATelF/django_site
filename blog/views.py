@@ -16,3 +16,9 @@ def about_page(request):
 def contacts_page(request):
 
     return render(request, "blog/contacts.html")
+
+def post_detail(request, slug):
+
+    post_detail = Post.objects.get(slug=slug)
+
+    return render(request, "post_detail.html", {"post_detail":post_detail})

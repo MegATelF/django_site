@@ -8,7 +8,7 @@
 
         {% for post in posts %}
 
-        <h3><a href="{% url 'post_detail' slug %}"></a>{{ post.title }}</h3>
+        <a href="{% url 'post-detail-page' post.slug %}"><h3>{{ post.title }}</h3></a>
         <p>{{ post.excerpt }}</p>
         <p>Теги: {{ post.tags.all|join:", " }}</p>
 

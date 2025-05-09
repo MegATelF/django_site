@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section>
+
+        <h2>Контент</h2>
+
+        <p>{{ post.content }}</p>
+    
+        <a href="{% url 'starting-page' %}">Обратно к списку блогов</a>
+
+    </section>
+
+{% endblock %}
